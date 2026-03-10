@@ -1,5 +1,8 @@
 ---
 title: "Почему важно хорошо оформлять Pull Request'ы и коммиты"
+slug: "good-prs-and-commits"
+aliases:
+- /posts/почему-важно-хорошо-оформлять-pull-request-ы-и-коммиты/
 date: 2022-08-24
 categories: [Development]
 draft: false
@@ -20,7 +23,7 @@ featuredimage: /img/commits_prs/commits_prs_cover.png
 
 Далее будет развёрнутый ответ на этот вопрос.
 
-<!-- more -->
+<!--more-->
 
 Примечание:  
 Всё описанное ниже касается и PRов, и коммитов. Я вообще долгое время работал с Gerrit (opens new window), где PR ==
