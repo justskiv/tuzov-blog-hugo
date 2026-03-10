@@ -6,6 +6,9 @@ draft: false
 tags:
 - Git
 - Pull Requests
+images:
+- /img/commits_prs/commits_prs_cover.png
+featuredimage: /img/commits_prs/commits_prs_cover.png
 
 ---
 
