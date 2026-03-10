@@ -3,4 +3,4 @@
 	url = https://github.com/dillonzq/LoveIt.git
 [submodule "themes/justskiv-loveit"]
 	path = themes/justskiv-loveit
-	url = https://github.com/JustSkiv/LoveIt.git
+	url = https://github.com/justskiv/LoveIt.git
