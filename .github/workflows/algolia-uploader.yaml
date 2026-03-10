@@ -1,5 +1,5 @@
 name: Upload index to Algolia
-on: [ push ]
+on: workflow_dispatch  # temporarily disabled, run manually if needed
 jobs:
   upload_algolia_index:
     runs-on: ubuntu-latest
