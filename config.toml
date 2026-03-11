@@ -36,6 +36,7 @@ rss = "/index.xml"
 habr = "JustSkiv"
 
 [params.page]
+lightgallery = true
 [params.page.comment]
 enable = true
 [params.page.comment.remark42]

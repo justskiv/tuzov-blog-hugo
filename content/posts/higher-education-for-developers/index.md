@@ -17,7 +17,7 @@ featuredimage: /img/my-education/my_education.png
 И я думаю, что эта история может мотивировать многих сомневающихся в себе людей, которые рассуждают в стиле: «_эх, куда
 мне до топовых ВУЗов и высокой науки, я же всего лишь…_»
 
-### Школа и колледж
+## Школа и колледж
 
 Я учился в сельской школе на 200 человек, где средний ученик мужского пола был троечником и не имел больших амбиций. Мне
 при этом удавалось учиться относительно неплохо и даже сохранять энтузиазм к некоторым предметам. В целом же на учёбу я
@@ -37,14 +37,16 @@ featuredimage: /img/my-education/my_education.png
 в подобное место на 100% провальная, не повезло.
 
 <figure style="float: right; max-width: 45%; margin: 0 0 1em 1.5em;">
+<a class="lightgallery" href="/img/my-education/photo_1.png" data-thumbnail="/img/my-education/photo_1.png" data-sub-html="<p>Моё первое рабочее место</p>">
 <img src="/img/my-education/photo_1.png" style="width: 100%; border-radius: 6px;" />
+</a>
 <figcaption style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.4em;">Моё первое рабочее место</figcaption>
 </figure>
 
 После окончания колледжа я без проблем устроился разработчиком в небольшую, но уютную конторку. Но не благодаря
 колледжу, а вопреки — насколько я знаю, я вообще единственный из моей группы, кто стал программистом.
 
-### Мысли о поступлении в ВУЗ
+## Мысли о поступлении в ВУЗ
 
 После колледжа логичным продолжением учёбы казался ВУЗ, но я решительно от него отказался, т.к. совсем разочаровался в
 системе образования. Я был уверен, что в ВУЗах ситуация не лучше, что подтверждали мои знакомые. Но нашелся один
@@ -71,7 +73,9 @@ featuredimage: /img/my-education/my_education.png
 
 
 <figure>
+  <a class="lightgallery" href="/img/my-education/photo_2.png" data-thumbnail="/img/my-education/photo_2.png" data-sub-html="<p>Моя подготовка к ЕГЭ</p>">
   <img src="/img/my-education/photo_2.png" style="width: 100%; border-radius: 6px;" />
+  </a>
   <figcaption style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.4em;">Моя подготовка к ЕГЭ</figcaption>
   </figure>
 
@@ -107,7 +111,9 @@ featuredimage: /img/my-education/my_education.png
 половина от оставшихся.
 
 <figure>
+  <a class="lightgallery" href="/img/my-education/photo_3.jpeg" data-thumbnail="/img/my-education/photo_3.jpeg" data-sub-html="<p>Сессия, подготовка к экзамену</p>">
   <img src="/img/my-education/photo_3.jpeg" style="width: 100%; border-radius: 6px;" />
+  </a>
   <figcaption style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.4em;">Сессия, подготовка к экзамену</figcaption>
   </figure>
 
@@ -135,6 +141,14 @@ featuredimage: /img/my-education/my_education.png
 В итоге, я поставил себе цель добраться потихоньку до теоретического потока. На втором курсе я уже был на основном (
 среднем) потоке, а на третьем попал на теоретический.
 
+<figure>
+  <a class="lightgallery" href="/img/my-education/lecture.jpeg" data-thumbnail="/img/my-education/lecture.jpeg" data-sub-html="<p>Кабинет на кафедре статистической физики, где я работал</p>">
+  <img src="/img/my-education/lecture.jpeg" style="width: 100%; border-radius: 6px;" />
+  </a>
+  <figcaption style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.4em;">
+Кабинет на кафедре статистической физики, где я работал</figcaption>
+  </figure>
+
 Но и на третьем курсе физфак продолжал надо мной нещадно издеваться. Я решил, что раз я наконец-то попал на теорпоток,
 то начну жизнь с нового листа и буду учиться ещё более старательно. У нас тогда начался новый курс — математическая
 физика (оно же ТФКП или комплексный анализ), который мне очень нравился, и я стал погружаться в
@@ -143,11 +157,13 @@ featuredimage: /img/my-education/my_education.png
 который крайне сложно. Но в итоге меня снова опускают с небес на землю — я допустил маленькую неточность в одном
 определении и меня тут же отправили на пересдачу.
 
-<figure>
-  <img src="/img/my-education/photo_4.jpeg" style="width: 100%; border-radius: 6px;" />
-  <figcaption style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.4em;">Фрагмент из конспекта для 
+<figure style="float: right; max-width: 45%; margin: 0 0 1em 1.5em;">
+<a class="lightgallery" href="/img/my-education/photo_4.jpeg" data-thumbnail="/img/my-education/photo_4.jpeg" data-sub-html="<p>Фрагмент из конспекта для подготовки к экзамену по математической физике</p>">
+<img src="/img/my-education/photo_4.jpeg" style="width: 100%; border-radius: 6px;" />
+</a>
+<figcaption style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.4em;">Фрагмент из конспекта для
 подготовки к экзамену по математической физике</figcaption>
-  </figure>
+</figure>
 
 Вообще, принципиальность и душный формализм наших математиков, это отдельная история. У меня пару раз был буквально
 такой разговор с принимающим:
@@ -187,6 +203,14 @@ featuredimage: /img/my-education/my_education.png
 присоединился к ещё одной похожей группе на своей новой кафедре — статистической физики (одно из моих любимых
 направлений в науке).
 
+<figure>
+  <a class="lightgallery" href="/img/my-education/kafedra.jpeg" data-thumbnail="/img/my-education/kafedra.jpeg" data-sub-html="<p>Кабинет на кафедре статистической физики, где я работал</p>">
+  <img src="/img/my-education/kafedra.jpeg" style="width: 100%; border-radius: 6px;" />
+  </a>
+  <figcaption style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.4em;">
+Кабинет на кафедре статистической физики, где я работал</figcaption>
+  </figure>
+
 Вообще, возможностей было много, а свободного времени очень мало, поэтому приходилось выбирать. Какое-то время я смог
 даже поработать с ребятами на кафедре физики высоких энергий, которые работали с Церном (эксперимент Алиса, на тот
 момент), были очень интересные предложения и с кафедры квантовой механики. Сердце разрывалось, хотелось заниматься всем!
@@ -212,6 +236,19 @@ featuredimage: /img/my-education/my_education.png
 стабильности, и ещё в отношении к тебе. Очень тяжело живётся, когда ты не уверен, сможешь ли получить следующий научный
 грант, найдётся ли для тебя свободная ставка в НИИ. Да и в целом, в отделе кадров НИИ ты ощущаешь, будто ты приходишь к
 ним на поклон, а они не очень то в тебе заинтересованы.
+
+_Кроме того, в этом посте я приложил несколько фоток типичного рабочего места в НИИ Физики им. В.А. Фока. И смешно, и
+грустно. Но
+смешного мало. Делайте выводы._
+
+
+<figure>
+  <a class="lightgallery" href="/img/my-education/photo_2.png" data-thumbnail="/img/my-education/photo_2.png" data-sub-html="<p>
+Моё рабочее место на другой кафедре</p>">
+  <img src="/img/my-education/kafedra2.jpeg" style="width: 100%; border-radius: 6px;" />
+  </a>
+  <figcaption style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.4em;">Моё рабочее место на другой кафедре</figcaption>
+  </figure>
 
 А теперь сравните это с жизнью разработчика — работодатели за тобой сами бегают, бюрократии минимум, к тебе относятся с
 уважением, и ты всегда уверен в завтрашнем дне. Моя первая зарплата на первой работе в качестве разработчика (после
