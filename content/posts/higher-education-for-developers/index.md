@@ -142,11 +142,12 @@ featuredimage: /img/my-education/my_education.png
 среднем) потоке, а на третьем попал на теоретический.
 
 <figure>
-  <a class="lightgallery" href="/img/my-education/lecture.jpeg" data-thumbnail="/img/my-education/lecture.jpeg" data-sub-html="<p>Кабинет на кафедре статистической физики, где я работал</p>">
+  <a class="lightgallery" href="/img/my-education/lecture.jpeg" data-thumbnail="/img/my-education/lecture.jpeg" data-sub-html="<p>
+Лекция и смешные рисуночки на доске, даже не спрашивайте что это..</p>">
   <img src="/img/my-education/lecture.jpeg" style="width: 100%; border-radius: 6px;" />
   </a>
   <figcaption style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.4em;">
-Кабинет на кафедре статистической физики, где я работал</figcaption>
+Лекция и смешные рисуночки на доске, даже не спрашивайте что это..</figcaption>
   </figure>
 
 Но и на третьем курсе физфак продолжал надо мной нещадно издеваться. Я решил, что раз я наконец-то попал на теорпоток,
