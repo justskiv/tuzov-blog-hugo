@@ -35,6 +35,14 @@ youtubeuser = "@nikolay_tuzov"
 rss = "/index.xml"
 habr = "JustSkiv"
 
+dateformat = "02.01.2006"
+
+[params.section]
+dateFormat = "02.01"
+
+[params.list]
+dateFormat = "02.01"
+
 [params.page]
 lightgallery = true
 [params.page.comment]
