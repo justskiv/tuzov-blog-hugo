@@ -22,6 +22,11 @@ email = "tuzov.n@gmail.com"
 link = "https://t.me/ntuzov"
 
 [params]
+  [params.author]
+    name = "Nikolay Tuzov"
+    email = "tuzov.n@gmail.com"
+    link = "https://t.me/ntuzov"
+
 # site default theme ["auto", "light", "dark"]
 defaultTheme = "auto"
 # website title for Open Graph and Twitter Cards
