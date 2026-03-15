@@ -27,6 +27,9 @@ link = "https://t.me/ntuzov"
     email = "tuzov.n@gmail.com"
     link = "https://t.me/ntuzov"
 
+  [params.footer]
+    hugo = false
+
 # site default theme ["auto", "light", "dark"]
 defaultTheme = "auto"
 # website title for Open Graph and Twitter Cards
