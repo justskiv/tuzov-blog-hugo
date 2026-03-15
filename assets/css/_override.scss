@@ -236,13 +236,12 @@ blockquote::before {
   opacity: 0.7;
 }
 
-.header-wrapper {
+header {
   background-color: #f0f0f0;
-}
 
-
-[theme="dark"] .header-wrapper {
-  background-color: #252627;
+  [theme="dark"] & {
+    background-color: #252627;
+  }
 }
 
 // admonition
