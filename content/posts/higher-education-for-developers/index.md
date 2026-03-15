@@ -2,7 +2,7 @@
 title: "Мой путь к высшему образованию"
 slug: "my-education-way"
 date: 2026-03-10
-categories: [ Development ]
+categories: [ Live ]
 tags:
   - Career
   - Education
