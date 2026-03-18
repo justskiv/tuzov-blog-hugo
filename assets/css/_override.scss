@@ -1,3 +1,9 @@
+// Card colors (structural styles in theme _partial/_card.scss)
+$card-bg: #ffffff;
+$card-bg-dark: #252627;
+$card-border-dark: solid 1px rgba(30, 31, 32, 0.1);
+
+// Dark mode images
 img {
   [theme=dark] & {
     filter: brightness(0.5);
@@ -11,6 +17,7 @@ img:hover {
   }
 }
 
+// Main background
 .main {
   background-color: #f9f9f9;
 }
@@ -19,86 +26,20 @@ img:hover {
   background-color: #292a2d;
 }
 
+// Dark mode text
 [theme="dark"] .single .content b, [theme="dark"] .single .content strong {
   color: #c4c4c4 !important;
-}
-
-.page.single.special{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
-
-.single.summary {
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-
-  //background-color: #f7f8f8;  /* Светло-серый фон */
-  background-color: #ffffff;  /* Светло-серый фон */
-  //color: #2f3437;
-  //background-color: #f6f8fa;  /* Светло-серый фон */
-  border: solid 1px rgba(0, 0, 0, 0.08) !important;
-  box-shadow:
-          0 8px 16px rgba(0, 0, 0, 0.08),    /* Основная тень */
-          0 4px 8px rgba(0, 0, 0, 0.06),     /* Средняя тень */
-          0 2px 4px rgba(0, 0, 0, 0.04);     /* Ближняя тень */
-  transform: translateY(-3px);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 [theme="dark"] .single.summary div {
   color: #c8c8cc !important;
 }
 
-.page.single {
-  //font-size: 16px !important;
-  //font-weight: 400;
-  //line-height: 1.6;
-
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-  padding-bottom: 45px;
-
-  //background-color: #f7f8f8;  /* Светло-серый фон */
-  background-color: #ffffff;  /* Светло-серый фон */
-  //color: #2f3437;
-  //background-color: #f6f8fa;  /* Светло-серый фон */
-  padding-top: 0;
-  border: solid 1px rgba(0, 0, 0, 0.08);
-  box-shadow:
-          0 8px 16px rgba(0, 0, 0, 0.08),    /* Основная тень */
-          0 4px 8px rgba(0, 0, 0, 0.06),     /* Средняя тень */
-          0 2px 4px rgba(0, 0, 0, 0.04);     /* Ближняя тень */
-  transform: translateY(-3px);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
 [theme="dark"] .single {
-  background-color: #252627;
-  padding-top: 0;
-  border: solid 1px rgba(30, 31, 32, 0.1);
-
-  //color: #c8c8cc !important;
-  color: #d1d1d1 !important; // like my obsidian
-
-  /* Добавляем эффекты объема */
-  //box-shadow:
-  //        0 4px 6px rgba(0, 0, 0, 0.1),     /* Основная тень снизу */
-  //        0 1px 3px rgba(0, 0, 0, 0.08);    /* Легкая тень по краям */
-  //transform: translateY(-2px);         /* Небольшой подъем */
-  //transition: transform 0.2s ease;     /* Плавная анимация при наведении */
-
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), /* Увеличенная основная тень */
-  0 4px 8px rgba(0, 0, 0, 0.1), /* Средняя тень */
-  0 2px 4px rgba(0, 0, 0, 0.08); /* Ближняя тень */
-  transform: translateY(-3px); /* Больший подъем */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #d1d1d1 !important;
 }
 
+// Hide post author
 .post-author {
   display: none !important;
 }
@@ -111,38 +52,10 @@ img:hover {
   margin-right: 2px;
 }
 
-// table of contents (toc)
-.toc {
-  opacity: 0.25;
-  transition: opacity 0.3s ease;
-}
-
-.toc:hover {
-  opacity: 1;
-}
-
-// code
+// Code
 .highlight {
   margin-top: 20px !important;
   margin-bottom: 20px !important;
-}
-
-// Post meta
-.post-meta {
-  background-color: rgba(1, 1, 1, .1);
-  padding: 8px;
-  border-radius: 5px;
-  margin-top: 10px !important;
-  margin-bottom: 20px !important;
-}
-
-.page.single .post-meta {
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-.post-meta-line {
-  margin-bottom: 4px !important;
 }
 
 // Color of the secondary text
@@ -152,30 +65,24 @@ $global-font-secondary-color-dark: #a2a2a2;
 // Tags
 .tag-cloud-tags a {
   background-color: rgba(1, 1, 1, .2) !important;
-  padding: 8px !important;;
-  border-radius: 4px !important;;
+  padding: 8px !important;
+  border-radius: 4px !important;
 }
 
 .tag-cloud-tags a:hover {
   background-color: rgba(1, 1, 1, .4) !important;
 }
 
-// links
+// Links
 $single-link-color: #4e678a;
 $single-link-color-dark: #6c89b7;
 
-// Color of the hover single link
 $single-link-hover-color: #282828;
 $single-link-hover-color-dark: #bdebfc;
 
-
 // Code blocks
-//$code-background-color-dark: #2d2d2d;
 $code-background-color-dark: #313131;
-
-//$code-color: #525252;
 $code-color: #525252;
-//$code-color-dark: #a9a9ab;
 $code-color-dark: #9a9a9b;
 
 code {
@@ -188,8 +95,7 @@ code {
   color: #c8c8cc !important;
 }
 
-// blockquote
-
+// Blockquote
 $blockquote-color: #777777;
 $blockquote-color-dark: #777777;
 
@@ -209,7 +115,7 @@ blockquote {
 }
 
 blockquote::before {
-  quotes: "“" "“";
+  quotes: "\201C" "\201D";
   font-family: 'Roboto', serif;
   color: #ccc;
   content: open-quote;
@@ -219,19 +125,13 @@ blockquote::before {
   vertical-align: -.4em;
 }
 
-// header
-
+// Header
 .single .content > h2 > .header-mark::before {
-  //color: #0d0a0a !important;
-  //content: "#" !important;
-  //display: none;
-  //text-decoration: dotted 2px black !important;
   text-decoration: none;
   color: #777 !important;
 }
 
 .single .content > h2:hover > .header-mark::before {
-  //display: inline !important;
   border-bottom: 1.5px dotted #777777;
   opacity: 0.7;
 }
@@ -244,11 +144,9 @@ header {
   }
 }
 
-// admonition
-
+// Admonition
 .single .content .admonition.success {
   background-color: rgba(0, 200, 83, 0.05) !important;
-  //border-left-color: #00c853;
   border-left-color: rgba(0, 200, 83, 0.3) !important;
 }
 
@@ -256,8 +154,7 @@ header {
   background-color: rgba(0, 200, 83, 0.08) !important;
 }
 
-// animation
-
+// Animation
 h1.animate__animated {
   -webkit-animation-duration: 0s !important;
   animation-duration: 0s !important;
@@ -266,40 +163,4 @@ h1.animate__animated {
 .highlight .animate__animated {
   -webkit-animation-duration: 0.5s !important;
   animation-duration: 0.5s !important;
-}
-
-@media only screen and (max-width: 680px) {
-  .page.single,
-  .single.summary {
-    box-sizing: border-box;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-    transform: none;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-left: -16px;
-    margin-right: -16px;
-    width: auto;
-  }
-
-  .page.single {
-    background-color: transparent;
-  }
-
-  [theme="dark"] .page.single,
-  [theme="dark"] .single.summary {
-    background-color: transparent;
-    box-shadow: none;
-    border: none;
-  }
-
-  [data-header-mobile] .page.single {
-    padding-top: 0;
-    margin-top: calc(var(--header-height) + 10px);
-  }
-
-  .toc {
-    opacity: 1;
-  }
 }
