@@ -3,16 +3,16 @@ $card-bg: #ffffff;
 $card-bg-dark: #252627;
 $card-border-dark: solid 1px rgba(30, 31, 32, 0.1);
 
-// Dark mode images
+// Dark mode images (exclude lightgallery overlay)
 img {
-  [theme=dark] & {
+  [theme=dark] &:not(.lg-object) {
     filter: brightness(0.5);
     transition: filter .6s ease-out;
   }
 }
 
 img:hover {
-  [theme=dark] & {
+  [theme=dark] &:not(.lg-object) {
     filter: none;
   }
 }
