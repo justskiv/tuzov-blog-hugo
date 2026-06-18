@@ -22,6 +22,13 @@ email = "tuzov.n@gmail.com"
 link = "https://t.me/ntuzov"
 
 [params]
+  # site default theme ["auto", "light", "dark"]
+  defaultTheme = "auto"
+  # website title for Open Graph and Twitter Cards
+  title = "Nikolay Tuzov blog"
+  # website description for RSS, SEO, Open Graph and Twitter Cards
+  description = "Блог о разработке и технологиях"
+
   [params.author]
     name = "Nikolay Tuzov"
     email = "tuzov.n@gmail.com"
@@ -30,12 +37,10 @@ link = "https://t.me/ntuzov"
   [params.footer]
     hugo = false
 
-# site default theme ["auto", "light", "dark"]
-defaultTheme = "auto"
-# website title for Open Graph and Twitter Cards
-title = "Nikolay Tuzov blog"
-# website description for RSS, SEO, Open Graph and Twitter Cards
-description = "Блог о разработке и технологиях"
+  # title shown when the site is added to an iOS/Android home screen
+  # (otherwise falls back to the theme placeholder "My cool site")
+  [params.app]
+    title = "Tuzov blog"
 
 [params.social]
 Telegram = "ntuzov"
