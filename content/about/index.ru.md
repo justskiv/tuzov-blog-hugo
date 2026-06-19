@@ -5,7 +5,7 @@ draft: false
 description: "Обо мне"
 ---
 
-![Hugo Theme LoveIt](/img/go.png)
+![Логотип языка Go](/img/go.png)
 
 Меня зовут Николай.
 
