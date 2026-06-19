@@ -1,0 +1,91 @@
+# https://taskfile.dev
+#
+# Common tasks for the tuzov.dev Hugo blog.
+# Run `task` (no args) to see the list.
+
+version: '3'
+
+vars:
+  PUBLIC_DIR: public
+  THEME: themes/justskiv-loveit
+  IMG_DIR: static/img
+  # Override per run: `task dev PORT=1314`
+  PORT: '{{.PORT | default "1313"}}'
+  # WebP quality for `task images`; override: `task images QUALITY=90`
+  QUALITY: '{{.QUALITY | default "82"}}'
+
+tasks:
+  default:
+    desc: List available tasks
+    silent: true
+    cmds:
+      - task --list
+
+  dev:
+    desc: Run the local dev server with hot reload (drafts included)
+    aliases: [serve, server, s]
+    interactive: true
+    cmds:
+      - hugo server -D --navigateToChanged --port {{.PORT}}
+
+  preview:
+    desc: Serve the production build locally to verify the real output
+    interactive: true
+    cmds:
+      - hugo server --environment production --minify --gc --port {{.PORT}}
+
+  build:
+    desc: Build the production site into ./public (minified, cleaned)
+    cmds:
+      - hugo --gc --minify --cleanDestinationDir
+
+  check:
+    desc: Strict build to memory — fails on warnings and errors
+    cmds:
+      - hugo --renderToMemory --gc --panicOnWarning --printPathWarnings --printI18nWarnings
+
+  clean:
+    desc: Remove build artifacts (keeps the tracked public/index.json)
+    cmds:
+      # -X removes only git-ignored files, so the tracked search index survives.
+      - git clean -fdX {{.PUBLIC_DIR}} resources
+      - rm -f .hugo_build.lock
+
+  new:
+    desc: 'Create a new post bundle: task new -- my-post-slug'
+    preconditions:
+      - sh: '[ -n "{{.CLI_ARGS}}" ]'
+        msg: 'usage: task new -- <post-slug>'
+    cmds:
+      - hugo new posts/{{.CLI_ARGS}}/index.md
+
+  drafts:
+    desc: List all draft posts
+    cmds:
+      - hugo list drafts
+
+  images:
+    desc: 'Convert PNG/JPEG to WebP (default: static/img). Extra flags after --'
+    aliases: [webp]
+    env:
+      WEBP_QUALITY: '{{.QUALITY}}'
+    cmds:
+      - ./scripts/to-webp.sh {{.CLI_ARGS}}
+
+  search:index:
+    desc: Rebuild the Algolia search index (public/index.json)
+    aliases: [index]
+    cmds:
+      - task: build
+      - 'echo "index ready: {{.PUBLIC_DIR}}/index.json — commit it to sync Algolia"'
+
+  init:
+    desc: Initialize submodules (run once after a fresh clone)
+    cmds:
+      - git submodule update --init --recursive
+
+  theme:update:
+    desc: Pull the latest theme into the submodule pointer
+    cmds:
+      - git submodule update --remote --merge {{.THEME}}
+      - 'echo "theme updated — commit the new {{.THEME}} pointer"'
