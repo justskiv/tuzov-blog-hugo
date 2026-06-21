@@ -14,6 +14,10 @@ languageName = "Russian"
 
 defaultContentLanguage = "ru"
 
+# Canonical post URLs: /posts/<slug>/ (every post sets an explicit slug)
+[permalinks]
+  posts = "/posts/:slug/"
+
 
 # Author config
 [author]

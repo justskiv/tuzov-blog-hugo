@@ -1,5 +1,8 @@
 ---
 title: "Как устроена функция time.Sleep() в Golang"
+slug: "how-time-sleep-works"
+aliases:
+- /posts/как-устроена-функция-time-sleep/
 date: 2022-09-13
 categories: [Golang]
 draft: false

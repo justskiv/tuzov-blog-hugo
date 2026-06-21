@@ -1,5 +1,8 @@
 ---
-title: Удалённая отладка Golang
+title: "Удалённая отладка Golang"
+slug: "golang-remote-debug"
+aliases:
+- /posts/удаленная-отладка-golang/
 date: 2018-08-03
 categories: [Development, Golang]
 excludeRelatedPost: true
