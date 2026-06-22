@@ -18,6 +18,12 @@ defaultContentLanguage = "ru"
 [permalinks]
   posts = "/posts/:slug/"
 
+# the theme fork uses the new template layout (layouts/_partials,
+# _shortcodes, _markup), which Hugo introduced in 0.146
+[module]
+  [module.hugoVersion]
+    min = "0.146.0"
+
 
 [params]
   # site default theme ["auto", "light", "dark"]
@@ -28,6 +34,10 @@ defaultContentLanguage = "ru"
   description = "Блог о разработке и технологиях"
   # default date format for single post and footer dates
   dateformat = "02.01.2006"
+  # hash algorithm for content-hash + SRI on bundled css/js
+  # (production builds only); value is passed straight to Hugo's
+  # `fingerprint` function, so it must be an algorithm, not a bool
+  fingerprint = "sha256"
 
   [params.author]
     name = "Nikolay Tuzov"
@@ -121,6 +131,10 @@ id = "82930849"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+
+# minify generated HTML/CSS/JS in the final build
+[minify]
+minifyOutput = true
 
 # Markup related configuration in Hugo
 [markup]
