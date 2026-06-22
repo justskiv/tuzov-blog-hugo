@@ -19,12 +19,6 @@ defaultContentLanguage = "ru"
   posts = "/posts/:slug/"
 
 
-# Author config
-[author]
-name = "Николай Тузов"
-email = "tuzov.n@gmail.com"
-link = "https://t.me/ntuzov"
-
 [params]
   # site default theme ["auto", "light", "dark"]
   defaultTheme = "auto"
@@ -32,6 +26,8 @@ link = "https://t.me/ntuzov"
   title = "Nikolay Tuzov blog"
   # website description for RSS, SEO, Open Graph and Twitter Cards
   description = "Блог о разработке и технологиях"
+  # default date format for single post and footer dates
+  dateformat = "02.01.2006"
 
   [params.author]
     name = "Nikolay Tuzov"
@@ -52,8 +48,6 @@ youtubeuser = "@nikolay_tuzov"
 rss = "/index.xml"
 habr = "JustSkiv"
 
-dateformat = "02.01.2006"
-
 [params.section]
 dateFormat = "02.01"
 
@@ -61,7 +55,7 @@ dateFormat = "02.01"
 dateFormat = "02.01"
 
 [params.page]
-lightgallery = true
+lightgallery = false
 [params.page.comment]
 enable = true
 [params.page.comment.remark42]
@@ -128,44 +122,6 @@ id = "82930849"
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 
-# Menu config
-[menu]
-[[menu.main]]
-weight = 1
-identifier = "posts"
-# you can add extra information before the name (HTML format is supported), such as icons
-pre = ""
-# you can add extra information after the name (HTML format is supported), such as icons
-post = ""
-name = "Posts"
-url = "/posts/"
-# title will be shown when you hover on this menu link
-title = ""
-[[menu.main]]
-weight = 2
-identifier = "tags"
-pre = ""
-post = ""
-name = "Tags"
-url = "/tags/"
-title = ""
-[[menu.main]]
-weight = 3
-identifier = "categories"
-pre = ""
-post = ""
-name = "Categories"
-url = "/categories/"
-title = ""
-[[menu.main]]
-weight = 4
-identifier = "about"
-pre = ""
-post = ""
-name = "About"
-url = "/about/"
-title = ""
-
 # Markup related configuration in Hugo
 [markup]
 [markup.goldmark.renderer]
@@ -208,51 +164,11 @@ post = ""
 url = "/categories/"
 title = ""
 [[languages.ru.menu.main]]
-weight = 3
+weight = 4
 identifier = "about"
 name = "Обо мне"
 pre = ""
 post = ""
 url = "/about/"
 title = ""
-
-
-#[languages.en]
-#weight = 2
-#title = "Nikolay Tuzov - blog"
-#name = "sad"
-#languageCode = "en"
-#languageName = "English"
-#[[languages.en.menu.main]]
-#weight = 1
-#identifier = "posts"
-#pre = ""
-#post = ""
-#name = "Posts"
-#url = "/posts/"
-#title = ""
-#[[languages.en.menu.main]]
-#weight = 2
-#identifier = "tags"
-#pre = ""
-#post = ""
-#name = "Tags"
-#url = "/tags/"
-#title = ""
-#[[languages.en.menu.main]]
-#weight = 3
-#identifier = "categories"
-#pre = ""
-#post = ""
-#name = "Categories"
-#url = "/categories/"
-#title = ""
-#[[languages.en.menu.main]]
-#weight = 5
-#identifier = "about"
-#pre = ""
-#post = ""
-#name = "About"
-#url = "/about/"
-#title = ""
 

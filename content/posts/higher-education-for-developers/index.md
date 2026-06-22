@@ -9,6 +9,7 @@ tags:
 images:
   - /img/my-education/my_education.webp
 featuredimage: /img/my-education/my_education.webp
+lightgallery: true
 ---
 
 Моя история весьма скромна — я не был выдающимся студентом, и не стал настоящим учёным, но при этом сама учёба на
