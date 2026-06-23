@@ -78,6 +78,7 @@ enable = false
 
 [params.home]
 [params.home.profile]
+title = "Николай Тузов"
 subtitle = "Блог о разработке и технологиях"
 gravatarEmail = "just.skiv@gmail.com"
 typeit = true
