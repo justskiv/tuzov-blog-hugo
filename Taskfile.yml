@@ -90,12 +90,23 @@ tasks:
       - git submodule update --remote --merge {{.THEME}}
       - 'echo "theme updated — commit the new {{.THEME}} pointer"'
 
-  push-all:
-    desc: Push the theme submodule first, then this repo
-    aliases: [push]
+  publish:
+    desc: Push theme, bump pointer if moved, then push the blog
+    aliases: [push, push-all]
+    silent: true
     cmds:
-      # Theme must land on its remote before the blog that references it.
-      - git -C {{.THEME}} push origin HEAD:master
-      # --recurse-submodules=check refuses to push the blog if its submodule
-      # pointer is a theme commit not yet on the theme remote.
-      - git push --recurse-submodules=check
+      # One block so the steps can share `did` for the closing line.
+      - |
+        set -e
+        c='\033[1;36m'; g='\033[1;32m'; dim='\033[2m'; r='\033[0m'; did=0
+        if [ -n "$(git -C {{.THEME}} log @{u}..HEAD 2>/dev/null)" ]; then did=1; fi
+        if ! git diff --quiet --ignore-submodules=dirty -- {{.THEME}}; then did=1; fi
+        if [ -n "$(git log @{u}..HEAD 2>/dev/null)" ]; then did=1; fi
+
+        printf "\n${c}▸ theme${r}\n";   git -C {{.THEME}} push origin HEAD:master
+        printf "\n${c}▸ pointer${r}\n"
+        if git diff --quiet --ignore-submodules=dirty -- {{.THEME}}; then printf "${dim}  nothing to bump${r}\n"; else git commit -m 'build(theme): bump submodule pointer' -- {{.THEME}}; fi
+        printf "\n${c}▸ blog${r}\n";    git push --recurse-submodules=check
+
+        printf "\n"
+        if [ "$did" = 1 ]; then printf "${g}✓ published${r}\n\n"; else printf "${dim}— nothing to publish, all up to date${r}\n\n"; fi
