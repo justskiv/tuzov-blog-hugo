@@ -127,12 +127,14 @@ blockquote::before {
 }
 
 // Header
-.single .content > h2 > .header-mark::before {
+.single .content > h2 > .header-mark::before,
+.single .content > h3 > .header-mark::before {
   text-decoration: none;
   color: #777 !important;
 }
 
-.single .content > h2:hover > .header-mark::before {
+.single .content > h2:hover > .header-mark::before,
+.single .content > h3:hover > .header-mark::before {
   border-bottom: 1.5px dotted #777777;
   opacity: 0.7;
 }
