@@ -89,3 +89,13 @@ tasks:
     cmds:
       - git submodule update --remote --merge {{.THEME}}
       - 'echo "theme updated — commit the new {{.THEME}} pointer"'
+
+  push-all:
+    desc: Push the theme submodule first, then this repo
+    aliases: [push]
+    cmds:
+      # Theme must land on its remote before the blog that references it.
+      - git -C {{.THEME}} push origin HEAD:master
+      # --recurse-submodules=check refuses to push the blog if its submodule
+      # pointer is a theme commit not yet on the theme remote.
+      - git push --recurse-submodules=check
