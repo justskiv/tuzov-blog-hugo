@@ -2,6 +2,7 @@
 title: "Мой путь в IT"
 slug: "my-way-to-it"
 date: 2026-03-11
+complexity: easy
 categories: [ Live ]
 tags:
   - Career
