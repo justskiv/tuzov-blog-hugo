@@ -12,7 +12,8 @@ and focuses on Go and backend development.
   [LoveIt](https://github.com/dillonzq/LoveIt) theme, wired in as a git
   submodule under `themes/justskiv-loveit/`. Site-specific style
   overrides live in `assets/css/_override.scss`.
-- **Search:** Algolia (index `tuzov.dev`).
+- **Search:** [Pagefind](https://pagefind.app/) — fully local, built at
+  deploy time, no external API.
 - **Comments:** self-hosted Remark42 at `remark42.tuzov.dev`.
 - **Analytics:** Yandex Metrica.
 
@@ -46,19 +47,18 @@ publishes the project from the repository, so a normal push to the
 production branch ships the site — no manual upload of `public/` is
 needed.
 
-## Search index
+## Search
 
-Algolia is fed from `public/index.json`, which Hugo emits from the JSON
-output format (see `[outputs]` in `config.toml`). That single file is
-the only thing under `public/` tracked in git.
+Search is fully local via [Pagefind](https://pagefind.app/) — no external
+API. Pagefind indexes the rendered HTML after the Hugo build and writes the
+index plus a lazy-loaded WASM runtime into `public/pagefind/`. The `build`
+task runs it automatically (`npx -y pagefind@1 --site public`), and
+Cloudflare Pages does the same via its build command
+(`hugo && npx -y pagefind@1 --site public`).
 
-Regenerate it with a normal build, then commit the updated file:
+Pagefind needs built HTML on disk, which `hugo server` does not produce, so
+to test search locally build and serve the static output:
 
 ```bash
-hugo --gc
-git add public/index.json
+task search:preview
 ```
-
-The GitHub Actions workflow `.github/workflows/algolia-uploader.yaml`
-uploads `public/index.json` to the `tuzov.dev` Algolia index and runs on
-demand (`workflow_dispatch`); it needs the `ALGOLIA_ADMIN_KEY` secret.

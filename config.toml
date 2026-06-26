@@ -85,8 +85,8 @@ typeit = true
 
 [params.search]
 enable = true
-# type of search engine ["lunr", "algolia"]
-type = "algolia"
+# type of search engine ["lunr", "algolia", "fuse", "pagefind"]
+type = "pagefind"
 # max index length of the chunked content
 contentLength = 4000
 # placeholder of the search bar
@@ -94,15 +94,19 @@ placeholder = ""
 #  max number of results length
 maxResultLength = 10
 #  snippet length of the result
-snippetLength = 30
+snippetLength = 120
 #  HTML tag name of the highlight part in results
 highlightTag = "em"
 #  whether to use the absolute URL based on the baseURL in search index
 absoluteURL = false
-[params.search.algolia]
-index = "tuzov.dev"
-appID = "7WGBJL8PGQ"
-searchKey = "6451625304c8f71b1f1313517aa1056c"
+[params.search.pagefind]
+#  bundle path; must match Pagefind's default output dir (public/pagefind/)
+basePath = "/pagefind/"
+#  faceted filters in the search dropdown — list of data-pagefind-filter
+#  names to expose; [] or omit = feature off (single on/off switch).
+#  Frozen in the theme but disabled for now (few posts); set
+#  ["category", "tag"] to re-enable.
+filters = []
 
 [params.page.toc]
 enable = true

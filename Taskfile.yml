@@ -35,9 +35,10 @@ tasks:
       - hugo server --environment production --minify --gc --port {{.PORT}}
 
   build:
-    desc: Build the production site into ./public (minified, cleaned)
+    desc: Build the production site into ./public, then index with Pagefind
     cmds:
       - hugo --gc --minify --cleanDestinationDir
+      - npx -y pagefind@1 --site {{.PUBLIC_DIR}}
 
   check:
     desc: Strict build to memory — fails on warnings and errors
@@ -45,9 +46,9 @@ tasks:
       - hugo --renderToMemory --gc --panicOnWarning --printPathWarnings --printI18nWarnings
 
   clean:
-    desc: Remove build artifacts (keeps the tracked public/index.json)
+    desc: Remove build artifacts (git-ignored files under public/ and resources)
     cmds:
-      # -X removes only git-ignored files, so the tracked search index survives.
+      # -X removes only git-ignored files, leaving tracked sources untouched.
       - git clean -fdX {{.PUBLIC_DIR}} resources
       - rm -f .hugo_build.lock
 
@@ -72,12 +73,13 @@ tasks:
     cmds:
       - ./scripts/to-webp.sh {{.CLI_ARGS}}
 
-  search:index:
-    desc: Rebuild the Algolia search index (public/index.json)
-    aliases: [index]
+  search:preview:
+    desc: Build with the Pagefind index, then serve public/ to test search
+    aliases: [search]
+    interactive: true
     cmds:
       - task: build
-      - 'echo "index ready: {{.PUBLIC_DIR}}/index.json — commit it to sync Algolia"'
+      - npx -y serve {{.PUBLIC_DIR}} -l {{.PORT}}
 
   init:
     desc: Initialize submodules (run once after a fresh clone)
