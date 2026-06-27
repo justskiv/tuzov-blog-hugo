@@ -135,7 +135,7 @@ enable = true
 id = "82930849"
 
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+home = ["HTML", "RSS"]
 
 # minify generated HTML/CSS/JS in the final build
 [minify]
