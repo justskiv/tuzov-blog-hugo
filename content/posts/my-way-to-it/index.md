@@ -10,9 +10,6 @@ images:
   - /img/my-way-to-it/cover.webp
 featuredimage: /img/my-way-to-it/cover.webp
 lightgallery: true
-build:
-  list: never
-  render: always
 ---
 
 Итак, впервые я увидел и пощупал настоящий персональный компьютер в гостях у родственников. Это было примерно в 2000-м
