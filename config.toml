@@ -131,6 +131,8 @@ typeit = false
 
 [params.analytics]
 enable = true
+[params.analytics.google]
+id = "G-327GNLKD17"
 [params.analytics.yandexMetrica]
 id = "82930849"
 
